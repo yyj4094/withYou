@@ -8,6 +8,6 @@
 <title>index 입니다</title>
 </head>
 <body>
-	Hello :)
+	Hello :) - Github is difficult to use at first.
 </body>
 </html>
