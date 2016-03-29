@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import member.model.MemberDAO;
+import member.model.MemberDTO;
+
 @WebServlet("/JoinCheckCtrl")
 public class JoinCheckController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -15,18 +18,24 @@ public class JoinCheckController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=utf-8");
 		
-		String m_id = request.getParameter("j_id");
-		String m_pw = request.getParameter("j_pw");
-		String m_name = request.getParameter("j_name");
 		int m_phone1 = Integer.parseInt(request.getParameter("j_num1"));
 		int m_phone2 = Integer.parseInt(request.getParameter("j_num2"));
 		int m_phone3 = Integer.parseInt(request.getParameter("j_num3"));
-		int m_phone =  m_phone1 + m_phone2 + m_phone3; 
-		String m_email = request.getParameter("j_email");
-		String m_address = request.getParameter("m_address");
-
 		
+		MemberDTO dto = new MemberDTO();
+		MemberDAO dao = new MemberDAO();
 		
+		dto.setM_id(request.getParameter("m_id"));
+		dto.setM_pw(request.getParameter("m_pw"));
+		dto.setM_name(request.getParameter("m_name"));
+		dto.setM_phone(Integer.parseInt(request.getParameter("m_phone")));
+		dto.setM_email(request.getParameter("m_email"));
+		dto.setM_address(request.getParameter("m_address"));
+		
+		dao.userInsert(dto);
+		System.out.println("check>>> Done");
+		
+		response.sendRedirect("index.jsp?page=welcome");	
 		
 	}
 
