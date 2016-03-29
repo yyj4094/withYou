@@ -10,7 +10,7 @@
 	function joinCheck(){
 		join.submit();
 	}
-	function goback(){
+	function gobac22k(){
 		alert("dd");
 	}
 </script>
