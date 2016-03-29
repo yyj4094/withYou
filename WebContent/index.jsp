@@ -28,7 +28,7 @@
 <c:catch>
 	<c:choose>
 		<c:when test="${param.page1==null || param.page1=='' }">
-		<c:set var="pageFile1" value="/pages/content.jsp"></c:set></c:when>
+		<c:set var="pageFile1" value="/pages/contents.jsp"></c:set></c:when>
 	<%-- 	<c:when test="${param.page1.equals('join') }">
 		<c:set var="pageFile1" value="join.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('adminboard') }">
