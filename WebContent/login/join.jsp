@@ -49,7 +49,7 @@
 			
 			<tr>
 				<td><input type="button" value="확인" onCilck="joinCheck()">
-				<a href="index.jsp?page1="><input type="button" value="취소"></a></td>
+				<a href="index.jsp?page1=cancel"><input type="button" value="취소"></a></td>
 			</tr>			
 		</table>
 	</form>
