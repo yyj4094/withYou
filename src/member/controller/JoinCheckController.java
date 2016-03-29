@@ -13,7 +13,21 @@ public class JoinCheckController extends HttpServlet {
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		response.setContentType("text/html; charset=utf-8");
+		
+		String m_id = request.getParameter("j_id");
+		String m_pw = request.getParameter("j_pw");
+		String m_name = request.getParameter("j_name");
+		int m_phone1 = Integer.parseInt(request.getParameter("j_num1"));
+		int m_phone2 = Integer.parseInt(request.getParameter("j_num2"));
+		int m_phone3 = Integer.parseInt(request.getParameter("j_num3"));
+		int m_phone =  m_phone1 + m_phone2 + m_phone3; 
+		String m_email = request.getParameter("j_email");
+		String m_address = request.getParameter("m_address");
+
+		
+		
+		
 	}
 
 

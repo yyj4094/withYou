@@ -6,8 +6,49 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Join!!!</title>
+<script type="text/javascript">
+	function joinCheck(){
+		joinform.submit();
+	}
+</script>
 </head>
 <body>
-Join!!!
+	<form action="JoinCheckCtrl" method="post" name="join">
+		<table>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="j_id"></td>			
+			</tr>	
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="j_pw"></td>			
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="j_name"></td>			
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td>
+					<input type="text" name="j_num1">-
+					<input type="text" name="j_num2">-
+					<input type="text" name="j_num3">
+				</td>			
+			</tr>
+			<tr>
+				<td>E-mail</td>
+				<td><input type="text" name="j_mail"></td>			
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input type="text" name="j_addr"></td>			
+			</tr>
+			
+			<tr>
+				<td><input type="button" value="확인" onCilck="joinCheck()">
+				<input type="button" value="취소"></td>
+			</tr>			
+		</table>
+	</form>
 </body>
 </html>
