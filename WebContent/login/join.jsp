@@ -8,10 +8,10 @@
 <title>Join!!!</title>
 <script type="text/javascript">
 	function joinCheck(){
-		joinform.submit();
+		join.submit();
 	}
-	function goBack() {
-	    window.history.back();
+	function goback(){
+		alert("dd");
 	}
 </script>
 </head>
