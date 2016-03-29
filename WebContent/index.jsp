@@ -33,7 +33,8 @@
 		<c:set var="pageFile1" value="login/login.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('join') }">
 		<c:set var="pageFile1" value="login/join.jsp"></c:set></c:when>
-		
+		<c:when test="${param.page1.equals('cancel') }">
+		<c:set var="pageFile1" value="login/login.jsp"></c:set></c:when>
 <%-- 		<c:when test="${param.page1.equals('adminboard') }">
 		<c:set var="pageFile1" value="admin/adminboard.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('adminInsert') }">
