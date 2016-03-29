@@ -10,6 +10,9 @@
 	function joinCheck(){
 		joinform.submit();
 	}
+	function goBack() {
+	    window.history.back();
+	}
 </script>
 </head>
 <body>
@@ -46,7 +49,7 @@
 			
 			<tr>
 				<td><input type="button" value="확인" onCilck="joinCheck()">
-				<input type="button" value="취소"></td>
+				<a href="index.jsp?page1="><input type="button" value="취소"></a></td>
 			</tr>			
 		</table>
 	</form>
