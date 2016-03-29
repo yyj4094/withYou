@@ -10,14 +10,7 @@
 	function joinCheck(){
 		join.submit();
 	}
-<<<<<<< HEAD
-	function goback(){
-		alert("eeeeeee");
-=======
-	function gobac22k(){
-		alert("dd");
->>>>>>> refs/remotes/origin/master
-	}
+
 </script>
 </head>
 <body>

@@ -8,7 +8,16 @@
 <title>sideinfo 입니다</title>
 </head>
 <body>
-sideinfo 입니다
-
+	<table>
+		<tr>
+			<td><a href ="index.jsp?page1=product">Product</a></td>
+		</tr>
+		<tr>
+			<td><a href ="index.jsp?page1=review">Review</a></td>
+		</tr>
+		<tr>
+			<td><a href ="index.jsp?page1=guestbook">Guestbook</a></td>
+		</tr>
+	</table>
 </body>
 </html>
