@@ -32,7 +32,7 @@ public class MemberDAO {
 		}
 	}
 	
-	//로그인 체크
+	//User Check Start
 	public int userCheck(String id, String pwd) {
 		
 		int result=0;	
@@ -46,21 +46,39 @@ public class MemberDAO {
 			String m_pw = "";
 			
 			while(rs.next()==true){
-				m_id=rs.getString("memId");
+				m_id=rs.getString("m_id");
 				if(m_id.equals(id)){
-					m_pw = rs.getString("memPw");					
+					m_pw = rs.getString("m_pw");					
 					if(m_pw.equals(pwd)){
-						System.out.println("login Succese");
+						System.out.println("login Success");
 						result = 1;
 					}
 				}
 			}
-			
 		} catch (SQLException e) {
-			System.out.println("fail to get information");
+			System.out.println("Fail to get information");
 			e.printStackTrace();
 		}
 		return result;
 	}// userCheck() end
-
+	
+	//UserInsert() Start
+		public void userInsert(MemberDTO dto) {
+			try {
+				cn=DS.getConnection();
+				sql = "insert into member_table values(?,?,?,?,?,?)";
+				pst = cn.prepareStatement(sql);
+				pst.setString(1, dto.getM_id());
+				pst.setString(2, dto.getM_pw());
+				pst.setString(3, dto.getM_name());
+				pst.setInt(4, dto.getM_phone());
+				pst.setString(5, dto.getM_email());
+				pst.setString(6, dto.getM_address());
+				pst.executeUpdate();
+				System.out.println("check1>>> UserInsert Succeeded");
+			} catch (SQLException e) {
+				System.out.println("check1>>> UserInsert Failed");
+				e.printStackTrace();
+			}	
+		}
 }
