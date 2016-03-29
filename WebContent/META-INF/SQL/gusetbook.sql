@@ -4,7 +4,7 @@ create table guestbook_table(
 g_num number,
 g_name varchar2(20) not null,
 g_pw varchar2(20) not null,
-g_contents varchat2(200) not null,
+g_contents varchar2(200) not null,
 primary key(g_num)
 );
 
