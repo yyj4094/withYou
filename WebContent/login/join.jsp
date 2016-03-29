@@ -11,7 +11,7 @@
 		join.submit();
 	}
 	function goback(){
-		alert("dd");
+		alert("eeeeeee");
 	}
 </script>
 </head>
