@@ -13,7 +13,6 @@ import member.model.MemberDAO;
 @WebServlet("/LoginCheckCtrl")
 public class LoginCheckController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=utf-8");

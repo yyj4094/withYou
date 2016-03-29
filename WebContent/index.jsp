@@ -9,8 +9,8 @@
 <style type="text/css">
 #container {background-color: #0f0f0f; width: 960px; margin:0 auto; padding:10px;}
 #header {background-color: #908866; height:100px;}
-#content {background-color: #f5f5f5; float:left; width:660px; height:400px;}
-#sideinfo {background-color: #dcdad9; float:right; width:300px; height:400px;}
+#content {background-color: #f5f5f5; float:right; width:660px; height:400px;}
+#sideinfo {background-color: #dcdad9; float:left; width:300px; height:400px;}
 #footer {background-color: #555555; clear:both; height:100px}
 </style>
 </head>
@@ -22,16 +22,19 @@
 		<c:when test="${param.page.equals('welcome') }">
 		<c:set var="pageFile" value="/pages/header.jsp"></c:set></c:when>
 		<c:when test="${param.page.equals('loginfail') }">
-		<c:set var="pageFile" value="/pages/header.jsp"></c:set></c:when>
+		<c:set var="pageFile" value="/pages/loginfail.jsp"></c:set></c:when>
 	</c:choose>
 </c:catch>
 <c:catch>
 	<c:choose>
 		<c:when test="${param.page1==null || param.page1=='' }">
 		<c:set var="pageFile1" value="/pages/contents.jsp"></c:set></c:when>
-	<%-- 	<c:when test="${param.page1.equals('join') }">
-		<c:set var="pageFile1" value="join.jsp"></c:set></c:when>
-		<c:when test="${param.page1.equals('adminboard') }">
+		<c:when test="${param.page1.equals('login') }">
+		<c:set var="pageFile1" value="login/login.jsp"></c:set></c:when>
+		<c:when test="${param.page1.equals('join') }">
+		<c:set var="pageFile1" value="login/join.jsp"></c:set></c:when>
+		
+<%-- 		<c:when test="${param.page1.equals('adminboard') }">
 		<c:set var="pageFile1" value="admin/adminboard.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('adminInsert') }">
 		<c:set var="pageFile1" value="admin/adminInsert.jsp"></c:set></c:when>

@@ -5,17 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>header 입니다</title>
+<title>login fail!!!</title>
+
 </head>
 <body>
-<form>
-	<table>
-		<tr>
-			<td><a href="index.jsp?page1=login">
-			<input type="button" value="LOG IN"></a>
-			</td>
-	 	</tr>
-	</table>
-</form>
+login fail!!!
+<input type="button" onClick="history">
 </body>
 </html>
