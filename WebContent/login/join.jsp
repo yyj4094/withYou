@@ -10,6 +10,9 @@
 	function joinCheck(){
 		join.submit();
 	}
+	function goback(){
+		alert("dd");
+	}
 </script>
 </head>
 <body>
