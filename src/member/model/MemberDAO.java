@@ -24,13 +24,15 @@ public class MemberDAO {
 		try{
 			Context init = new InitialContext();
 			DS=(DataSource)init.lookup("java:comp/env/jdbc/sch");
+			System.out.println("DB access ");
 		}catch(NamingException e){
+			System.out.println("DB access failed");
 			e.printStackTrace();
 			return;
 		}
 	}
 	
-	//ï¿½Î±ï¿½ï¿½ï¿½ Ã¼Å©
+	//·Î±×ÀÎ Ã¼Å©
 	public int userCheck(String id, String pwd) {
 		
 		int result=0;	
@@ -48,12 +50,14 @@ public class MemberDAO {
 				if(m_id.equals(id)){
 					m_pw = rs.getString("memPw");					
 					if(m_pw.equals(pwd)){
+						System.out.println("login Succese");
 						result = 1;
 					}
 				}
 			}
 			
 		} catch (SQLException e) {
+			System.out.println("fail to get information");
 			e.printStackTrace();
 		}
 		return result;

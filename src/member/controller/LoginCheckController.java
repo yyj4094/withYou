@@ -29,8 +29,10 @@ public class LoginCheckController extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("id", id);
 			response.sendRedirect("index.jsp?page=welcome");
+			System.out.println("check3>>> to the login success page");
 		}else{
 			response.sendRedirect("index.jsp?page=loginfail");
+			System.out.println("check3-1>>> to the login fail page");
 		}		
 	}
 	

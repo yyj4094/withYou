@@ -9,6 +9,7 @@
 <script type="text/javascript">
 	function check(){
 		if(log.j_id.value=="" || log.j_pwd.value==""){
+			alert("Please type ID and PW");
 			log.j_id.focus();
 			return;
 	}
@@ -40,6 +41,8 @@
 		</td>
 		<td>
 			<a href="index.jsp?page1=join">회원가입</a>
+<!-- 			<input type="button" value = "Join us" onClick="join()" >
+ -->		</td>
 	</tr>
 </table>
 
