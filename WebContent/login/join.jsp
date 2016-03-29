@@ -6,14 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Join!!!</title>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	function joinCheck(){
 		join.submit();
 	}
-	function gobac22k(){
-		alert("dd");
-	}
-</script>
+</script> -->
 </head>
 <body>
 	<form action="JoinCheckCtrl" method="post" name="join">
@@ -48,7 +45,9 @@
 			</tr>
 			
 			<tr>
-				<td><input type="button" value="확인" onCilck="joinCheck()">
+				<td>
+				<input type ="submit" value = "가입" >
+			<!-- 	<input type="button" value="가입" onCilck="joinCheck()"> -->
 				<a href="index.jsp?page1=cancel"><input type="button" value="취소"></a></td>
 			</tr>			
 		</table>

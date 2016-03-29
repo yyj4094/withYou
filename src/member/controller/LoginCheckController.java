@@ -16,8 +16,9 @@ public class LoginCheckController extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=utf-8");
-		String id=request.getParameter("m_id");
-		String pwd=request.getParameter("m_pw");
+		
+		String id=request.getParameter("j_id");
+		String pwd=request.getParameter("j_pw");
 		System.out.println("check1>>> id : " + id + " pwd : " + pwd );
 
 		MemberDAO dao = new MemberDAO();

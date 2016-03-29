@@ -22,7 +22,7 @@
 		<c:when test="${param.page.equals('welcome') }">
 		<c:set var="pageFile" value="/pages/header.jsp"></c:set></c:when>
 		<c:when test="${param.page.equals('loginfail') }">
-		<c:set var="pageFile" value="/pages/loginfail.jsp"></c:set></c:when>
+		<c:set var="pageFile" value="/login/loginfail.jsp"></c:set></c:when>
 	</c:choose>
 </c:catch>
 <c:catch>
@@ -35,6 +35,9 @@
 		<c:set var="pageFile1" value="login/join.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('cancel') }">
 		<c:set var="pageFile1" value="login/login.jsp"></c:set></c:when>
+
+
+
 <%-- 		<c:when test="${param.page1.equals('adminboard') }">
 		<c:set var="pageFile1" value="admin/adminboard.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('adminInsert') }">
