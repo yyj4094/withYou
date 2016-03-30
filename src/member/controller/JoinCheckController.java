@@ -20,17 +20,18 @@ public class JoinCheckController extends HttpServlet {
 		int m_phone1 = Integer.parseInt(request.getParameter("j_num1"));
 		int m_phone2 = Integer.parseInt(request.getParameter("j_num2"));
 		int m_phone3 = Integer.parseInt(request.getParameter("j_num3"));
+		int m_phone = m_phone1 + m_phone2 + m_phone3;
 		
 		MemberDTO dto = new MemberDTO();
+		
+		dto.setM_id(request.getParameter("j_id"));
+		dto.setM_pw(request.getParameter("j_pw"));
+		dto.setM_name(request.getParameter("j_name"));
+		dto.setM_phone(m_phone);
+		dto.setM_email(request.getParameter("j_mail"));
+		dto.setM_address(request.getParameter("j_addr"));
+		
 		MemberDAO dao = new MemberDAO();
-		
-		dto.setM_id(request.getParameter("m_id"));
-		dto.setM_pw(request.getParameter("m_pw"));
-		dto.setM_name(request.getParameter("m_name"));
-		dto.setM_phone(Integer.parseInt(request.getParameter("m_phone")));
-		dto.setM_email(request.getParameter("m_email"));
-		dto.setM_address(request.getParameter("m_address"));
-		
 		dao.userInsert(dto);
 		System.out.println("check>>> Done");
 		

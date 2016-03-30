@@ -8,11 +8,18 @@
 <title>header 입니다</title>
 </head>
 <body>
+<c:set var="id" value="${id }"/>
+
 <form>
 	<table>
 		<tr>
-			<td><a href="index.jsp?page1=login">
+		<td><c:if test="${id != null }">${id }님 환영합니다.	
+		<a href="login/logout.jsp?id=${id }">[로그아웃]</a></c:if>
+			<c:if test ="${id == null }">
+			<a href="index.jsp?page1=login">
 			<input type="button" value="LOG IN"></a>
+		
+		</c:if>
 			</td>
 	 	</tr>
 	</table>
