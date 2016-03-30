@@ -8,10 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form>
+<form action="GuestbookInsert Ctrl">
 	<table>
 		<tr>
-			<td>이름</td>
+			<td>작성자</td>
 			<td><input type="text" name=g_name></td>
 			<td>비밀번호</td>
 			<td><input type="password" name=g_pw></td>	
@@ -22,12 +22,25 @@
 		</tr>
 		
 		<tr>
-		<td><a href=GuestbookListCtrl><input type="button" value="Save" ></a>
+		<td><input type="button" value="Save" >
 		<input type="reset" value="Reset"></td>
 		</tr>
 	</table>
+	<br><br><br>
 	
-	
+	<!--foreach 이용해서 db에 있는 모든 데이터 가져와서 보여줘야 함.  -->
+	<table border="1">
+		<tr>
+			<td>작성자</td>
+			<td>hello</td>
+		</tr>
+		<tr>
+			<td>내용</td>
+			<td>contents</td>
+			<td><!-- <a href=guestbookDeleteCtrl?>  ? 뒤에 low넘버 보낼수 있게 수정.-->
+				<!-- </a> -->삭제</td>
+		</tr>
+	</table>
 </form>
 </body>
 </html>
