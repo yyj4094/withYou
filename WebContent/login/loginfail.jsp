@@ -9,7 +9,8 @@
 
 </head>
 <body>
-login fail!!!
-<input type="button" onClick="history">
+<p2>아이디와 비밀번호를 정확히 입력해 주세요.</p2>
+<a href="index.jsp?page1=cancel">
+<input type="button" value="뒤로가기"></a>
 </body>
 </html>
