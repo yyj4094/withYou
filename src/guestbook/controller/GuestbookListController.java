@@ -7,13 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import guestbook.model.GuestbookDAO;
+import guestbook.model.GuestbookDTO;
+
 
 @WebServlet(name = "GuestbookListCtrl", urlPatterns = { "/GuestbookListCtrl" })
 public class GuestbookListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=utf-8");
+		GuestbookDAO dao = new GuestbookDAO();
+		GuestbookDTO dto = new GuestbookDTO();
+		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
