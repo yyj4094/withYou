@@ -37,7 +37,7 @@ public class GuestbookDAO {
 		List<GuestbookDTO> guestbooklist = new ArrayList<GuestbookDTO>();	
 		System.out.println("chcek>>> 리스트컬렉션호출");
 		try {
-			sql = "select * from guestbook_table order by g_num";
+			sql = "select * from guestbook_table order by g_num DESC";
 			cn=DS.getConnection(); 
 			st=cn.createStatement();
 			rs=st.executeQuery(sql);
@@ -60,12 +60,11 @@ public class GuestbookDAO {
 	public int insertGuestbook(GuestbookDTO dto) {
 		int result = 0;
 		try {
-			sql = "insert into guestbook_table values(seq_adminboard_goods_num.nextval,?,?,?)";
+			sql = "insert into guestbook_table values(seq_guestbook_table_g_num.nextval,?,?)";
 			cn = DS.getConnection();
 			pst = cn.prepareStatement(sql);
 			pst.setString(1, dto.getG_name());
-			pst.setString(2, dto.getG_pw());
-			pst.setString(3, dto.getG_contents());
+			pst.setString(2, dto.getG_contents());
 			result = pst.executeUpdate();
 			System.out.println("insert succeed");
 			result=1;

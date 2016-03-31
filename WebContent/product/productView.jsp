@@ -8,6 +8,27 @@
 <title>P_View</title>
 </head>
 <body>
-P_View
+
+<a href="index.jsp?page1=productInsert">글쓰기</a>	
+	<form>
+		<table bother="1" align="center">
+		
+<%-- 		<c:set var="dto" value=list1/>
+		${dto.p_title }
+ --%>			
+			<!-- foreach -->
+			<c:forEach var="dto" items="${list1 }" begin="1" end="3" step="1">
+				<tr>
+					<td>${dto.p_name }</td>	
+ 				</tr>
+ 				
+ 				<tr>
+ 					<td>${dto.p_contents }</td>
+ 				</tr>
+			</c:forEach>
+			<!-- foreach end -->
+		</table>
+	</form>
+		
 </body>
 </html>
