@@ -8,7 +8,10 @@
 <title>sideinfo 입니다</title>
 </head>
 <body>
-sideinfo 입니다
-
+	<c:if test="${id != null }">
+	<a href="index.jsp?page1=product"> Product </a><br>
+	<a href="ReviewListCtrl"> review </a><br>
+	<a href="GuestbookListCtrl"> guestbook </a><br>
+	</c:if>
 </body>
 </html>

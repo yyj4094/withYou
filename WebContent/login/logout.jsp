@@ -8,7 +8,13 @@
 <title>Logout!!!</title>
 
 </head>
+<%
+	session.invalidate();
+%> 
 <body>
 Logout!!!
+<c:redirect url="../index.jsp" />
+
+
 </body>
 </html>

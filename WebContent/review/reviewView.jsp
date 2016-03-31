@@ -6,8 +6,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+	function reviewDetail(num){
+		document.reviewform.action="./ReviewDetailCtrl?num="+num;
+		document.reviewform.submit();
+	}
+</script>
 </head>
 <body>
-
+<p align="right"><a href="index.jsp?page1=reviewInsert">글쓰기</a></p>
+<form name="reviewform" method="post">
+<table border="1" cellspacing="0" cellpadding="0" align="center" width="650">
+<tr>
+	<td>Number</td>
+	<td>Title</td>
+	<td>Name</td>
+	<td>Date</td>
+</tr>
+<c:forEach var="dto" items="${list }">
+<tr>
+	<td>${dto.r_num}</td>
+	<td><a href="javascript:reviewDetail(${dto.r_num });">${dto.r_title}</a></td>
+	<td>${dto.r_name}</td>
+	<td>${dto.r_date}</td>
+</tr>
+</c:forEach>
+</table>
+</form>
 </body>
 </html>

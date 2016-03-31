@@ -1,6 +1,9 @@
 package guestbook.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import guestbook.model.GuestbookDAO;
-import guestbook.model.GuestbookDTO;
 
 
 @WebServlet(name = "GuestbookListCtrl", urlPatterns = { "/GuestbookListCtrl" })
@@ -19,7 +21,11 @@ public class GuestbookListController extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		GuestbookDAO dao = new GuestbookDAO();
-		GuestbookDTO dto = new GuestbookDTO();
+		ArrayList list = (ArrayList)dao.getGuestbookList();
+		request.setAttribute("list", list);
+		
+		RequestDispatcher dis = request.getRequestDispatcher("/index.jsp?page1=guestbookView");
+		dis.forward(request, response);
 		
 	}
 

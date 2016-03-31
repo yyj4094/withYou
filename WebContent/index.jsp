@@ -35,17 +35,30 @@
 		<c:set var="pageFile1" value="login/join.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('cancel') }">
 		<c:set var="pageFile1" value="login/login.jsp"></c:set></c:when>
+		
 
 
+		<c:when test="${param.page1.equals('guestbook') }">
+		<c:set var="pageFile1" value="guestbook/guestbookView.jsp"></c:set></c:when>
+		<c:when test="${param.page1.equals('guestbookView') }">
+		<c:set var="pageFile1" value="guestbook//guestbookView.jsp"></c:set></c:when>
+		
 
-<%-- 		<c:when test="${param.page1.equals('adminboard') }">
-		<c:set var="pageFile1" value="admin/adminboard.jsp"></c:set></c:when>
-		<c:when test="${param.page1.equals('adminInsert') }">
-		<c:set var="pageFile1" value="admin/adminInsert.jsp"></c:set></c:when>
-		<c:when test="${param.page1.equals('adminDetail') }">
-		<c:set var="pageFile1" value="admin/adminDetail.jsp"></c:set></c:when>
-		<c:when test="${param.page1.equals('adminEdit') }">
-		<c:set var="pageFile1" value="admin/adminEdit.jsp"></c:set></c:when> --%>
+
+		<c:when test="${param.page1.equals('reviewView') }">
+		<c:set var="pageFile1" value="review/reviewView.jsp"></c:set></c:when>
+		<c:when test="${param.page1.equals('reviewInsert') }">
+		<c:set var="pageFile1" value="review/reviewInsert.jsp"></c:set></c:when>
+		<c:when test="${param.page1.equals('reviewDetail') }">
+		<c:set var="pageFile1" value="review/reviewDetail.jsp"></c:set></c:when>
+		<c:when test="${param.page1.equals('reviewEdit') }">
+		<c:set var="pageFile1" value="review/reviewEdit.jsp"></c:set></c:when>
+				
+
+
+		<c:when test="${param.page1.equals('product') }">		
+		<c:set var="pageFile1" value="product/productView.jsp"></c:set></c:when>
+		
 	</c:choose>
 </c:catch>
 <body>

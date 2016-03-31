@@ -1,15 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script>
+	function guestbookDelete(num){
+		document.guestbookComment.action="./GuestbookDeleteCtrl?num="+num;
+		document.guestbookComment.submit();
+	}
+</script>
 </head>
 <body>
-<form action="GuestbookInsert Ctrl">
-	<table>
+<form action="GuestbookInsertCtrl" method="post">
+	<table border="1" >
 		<tr>
 			<td>작성자</td>
 			<td><input type="text" name=g_name></td>
@@ -18,27 +25,32 @@
 		</tr>
 		
 		<tr>
-		<td><a href=GuestbookListCtrl><input type="button" value="Save" ></a>
-		<td><input type="button" value="Save" >
-		<input type="reset" value="Reset"></td>
-		</tr>
-	</table>
-	<br><br><br>
-</form>
-	
-	
-	<!--foreach 이용해서 db에 있는 모든 데이터 가져와서 보여줘야 함.  -->
-	<table border="1">
-		<tr>
-			<td>작성자</td>
-			<td>hello</td>
-		</tr>
-		<tr>
 			<td>내용</td>
-			<td>contents</td>
-			<td><!-- <a href=guestbookDeleteCtrl?>  ? 뒤에 low넘버 보낼수 있게 수정.-->
-				<!-- </a> -->삭제</td>
+			<td colspan="4"><textarea name=g_contents rows="3" cols="45"></textarea></td>
+		</tr>
+		
+		<tr>
+			<td align="center" colspan="4"><input type="submit" value="Save" >
+			<input type="reset" value="Reset"></td>
 		</tr>
 	</table>
+</form>
+
+<form name="guestbookComment" method="post">
+	<table border="1" >
+		<c:forEach var="dto" items="${list }">
+			<tr>
+				<td>작성자</td>
+				<td>${dto.g_name}</td>
+			</tr>
+			<tr>
+				<td>내용</td>
+				<td>${dto.g_contents }</td>
+				<td><a href="GuestbookDeleteCtrl?num=${dto.g_num }">
+					삭제</a></td>
+			</tr>
+		</c:forEach>
+	</table>
+</form>
 </body>
 </html>
