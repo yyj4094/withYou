@@ -62,6 +62,8 @@
 	</c:choose>
 </c:catch>
 <body>
+
+test
 	<div id="container">
 		<div id="header"><jsp:include page="${pageFile }"/></div>
 		<div id="content"><jsp:include page="${pageFile1 }"/></div>
