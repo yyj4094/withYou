@@ -61,10 +61,13 @@
 		<c:set var="pageFile1" value="product/productView.jsp"></c:set></c:when>
 		<c:when test="${param.page1.equals('productInsert') }">		
 		<c:set var="pageFile1" value="product/productInsert.jsp"></c:set></c:when>
+		<c:when test="${param.page1.equals('productDetail') }">		
+		<c:set var="pageFile1" value="product/productDetail.jsp"></c:set></c:when>
+		<c:when test="${param.page1.equals('ProductEdit') }">		
+		<c:set var="pageFile1" value="product/productEdit.jsp"></c:set></c:when>
 		
 		
-		
-		
+				
 	</c:choose>
 </c:catch>
 <body>

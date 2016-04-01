@@ -30,7 +30,7 @@ public class ProductInsertController extends HttpServlet {
 		dto.setP_quantity(Integer.parseInt(request.getParameter("p_quantity")));
 		dto.setP_color(request.getParameter("p_color"));
 				
-		int result = dao.ProductList(dto);
+		int result = dao.ProductInsert(dto);
 		
 		
 		RequestDispatcher dis = getServletContext().getRequestDispatcher("/ProductListCtrl");

@@ -11,24 +11,29 @@
 
 <a href="index.jsp?page1=productInsert">글쓰기</a>	
 	<form>
-		<table bother="1" align="center">
-		
-<%-- 		<c:set var="dto" value=list1/>
-		${dto.p_title }
- --%>			
-			<!-- foreach -->
-			<c:forEach var="dto" items="${list1 }" begin="1" end="3" step="1">
+		<table border="1" align="center">
+				<% int cnt=0; %>
 				<tr>
-					<td>${dto.p_name }</td>	
- 				</tr>
- 				
- 				<tr>
- 					<td>${dto.p_contents }</td>
- 				</tr>
-			</c:forEach>
-			<!-- foreach end -->
-		</table>
+					<c:forEach var="dto" items="${list1}">
+						<td>
+							<table border="1">
+								<tr>
+									<td>photo</td>
+								</tr>
+								<tr>
+									<td><a href="ProductDetailCtrl?num=${dto.p_num }">${dto.p_name }</a><br>${dto.p_contents }</td>	
+								</tr>
+							</table>
+						</td>
+						<% cnt++; %>
+						<% if(cnt%3==0){%></tr><tr><%} %>
+					</c:forEach>
+				</tr>	
+			</table>
 	</form>
 		
 </body>
 </html>
+
+
+			
