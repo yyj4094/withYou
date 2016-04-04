@@ -60,7 +60,7 @@ public class GuestbookDAO {
 	public int insertGuestbook(GuestbookDTO dto) {
 		int result = 0;
 		try {
-			sql = "insert into guestbook_table values(seq_adminboard_goods_num.nextval,?,?,?)";
+			sql = "insert into guestbook_table values(seq_guestbook_table_g_num.nextval,?,?,?)";
 			cn = DS.getConnection();
 			pst = cn.prepareStatement(sql);
 			pst.setString(1, dto.getG_name());

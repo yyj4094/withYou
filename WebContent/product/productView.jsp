@@ -8,6 +8,24 @@
 <title>P_View</title>
 </head>
 <body>
-P_View
+		<table border="1" align="center">
+				<tr>
+				<%int count=0; %>
+				<%for(int i=0;i<10;i++){ %> 
+					<td>
+						<table border ="1">
+						<tr>
+							<td>photo</td>
+						</tr>
+						</table>
+					</td>
+					<%count++; %>
+					<%if(count % 3==0){ %>
+					</tr><tr>
+					<%} %>	
+					<%} %>
+					</tr>
+		</table>
+		
 </body>
 </html>
