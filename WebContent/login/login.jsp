@@ -13,8 +13,7 @@
 			log.j_id.focus();
 			return;
 	}
-	/* log.submit(); */
-	}
+
 </script>
 </head>
 <body>
