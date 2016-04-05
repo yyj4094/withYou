@@ -1,7 +1,6 @@
 package review.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import review.model.reviewDAO;
 import review.model.reviewDTO;
-import reviewComment.model.reviewCommentDAO;
-import reviewComment.model.reviewCommentDTO;
 
 
 @WebServlet(name = "ReviewDetailCtrl", urlPatterns = { "/ReviewDetailCtrl" })
@@ -26,17 +23,10 @@ public class ReviewDetailController extends HttpServlet {
 		
 		reviewDAO dao = new reviewDAO();
 		reviewDTO dto = new reviewDTO();
-		reviewCommentDTO cdto = new reviewCommentDTO();
-		reviewCommentDAO cdao = new reviewCommentDAO();
-		String num = request.getParameter("num");
 		
+		String num = request.getParameter("num");
 		dto = dao.getReview(Integer.parseInt(num));
 		request.setAttribute("dto", dto);
-		
-		ArrayList list = (ArrayList)cdao.getreviewCommentList(Integer.parseInt(num));		
-		request.setAttribute("list", list);
-		
-		
 		RequestDispatcher dis = request.getRequestDispatcher("index.jsp?page1=reviewDetail");
 		dis.forward(request, response);
 	}

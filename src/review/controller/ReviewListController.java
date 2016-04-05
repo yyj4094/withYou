@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import review.model.reviewDAO;
-import reviewComment.model.reviewCommentDAO;
 
 
 @WebServlet(name = "ReviewListCtrl", urlPatterns = { "/ReviewListCtrl" })
@@ -22,10 +21,8 @@ public class ReviewListController extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		reviewDAO dao = new reviewDAO();
-		
 		ArrayList list = (ArrayList)dao.getReviewList();
 		request.setAttribute("list", list);
-		
 		RequestDispatcher dis = request.getRequestDispatcher("index.jsp?page1=reviewView");
 		dis.forward(request, response);
 	}
