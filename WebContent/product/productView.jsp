@@ -11,12 +11,12 @@
 
 <a href="index.jsp?page1=productInsert">글쓰기</a>	
 	<form>
-		<table border="1" align="center">
+		<table border="1" cellspacing="0" cellpadding="0" align="center" width="650">
 				<% int cnt=0; %>
 				<tr>
 					<c:forEach var="dto" items="${list1}">
 						<td>
-							<table border="1">
+							<table>
 								<tr>
 									<td>photo</td>
 								</tr>
