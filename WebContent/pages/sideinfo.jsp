@@ -9,9 +9,9 @@
 </head>
 <body>
 	<c:if test="${id != null }">
-	<a href="index.jsp?page1=product"> Product </a><br>
-	<a href="ReviewListCtrl"> review </a><br>
-	<a href="GuestbookListCtrl"> guestbook </a><br>
+	<a href="ProductListCtrl"> Product </a><br>
+	<a href="ReviewListCtrl"> Review </a><br>
+	<a href="GuestbookListCtrl"> Guestbook </a><br>
 	</c:if>
 </body>
 </html>

@@ -28,7 +28,7 @@ public class GuestbookInsertController extends HttpServlet {
 		GuestbookDTO dto = new GuestbookDTO();
 
 		dto.setG_name(request.getParameter("g_name"));
-		dto.setG_pw(request.getParameter("g_pw"));
+		//dto.setG_pw(request.getParameter("g_pw"));
 		dto.setG_contents(request.getParameter("g_contents"));
 
 		int result = dao.insertGuestbook(dto);
