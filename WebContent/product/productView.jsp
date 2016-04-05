@@ -8,7 +8,6 @@
 <title>P_View</title>
 </head>
 <body>
-<<<<<<< HEAD
 
 <a href="index.jsp?page1=productInsert">글쓰기</a>	
 	<form>
@@ -32,7 +31,6 @@
 				</tr>	
 			</table>
 	</form>
-=======
 		<table border="1" align="center">
 				<tr>
 				<%int count=0; %>
@@ -52,7 +50,6 @@
 					</tr>
 		</table>
 		
->>>>>>> parent of f685ae9... Revert "아마도 완성본?"
 </body>
 </html>
 
