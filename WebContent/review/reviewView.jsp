@@ -31,6 +31,7 @@
 	<td>${dto.r_date}</td>
 </tr>
 </c:forEach>
+
 </table>
 </form>
 </body>

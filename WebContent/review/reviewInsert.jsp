@@ -9,14 +9,10 @@
 <style type="text/css">
 td,tr { padding:0px; margin:0px; }
 </style>
-<script type="text/javascript">
-	function insert(){
-		listform.submit();
-	}
-</script>
+
 </head>
 <body>
-<form name="listform" action="ReviewInsertCtrl" method="post">
+<form name="listform" action="reviewInsertCtrl" method="post">
 <table>
 
 	<tr>
