@@ -25,7 +25,6 @@ public class ReviewDoneEditController extends HttpServlet {
 		reviewDTO dto = new reviewDTO();
 		
 		String num = request.getParameter("num");
-		
 		dto.setR_num(Integer.parseInt(num));
 		dto.setR_title(request.getParameter("r_title"));
 		dto.setR_name(request.getParameter("r_name"));

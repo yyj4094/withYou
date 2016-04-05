@@ -8,6 +8,46 @@
 <title>P_edit!!!</title>
 </head>
 <body>
-P_edit!!!
+	<form action="ProductDoneEditCtrl?num=${dto.p_num}" method="post">
+		<table border="1" align="center">
+			<tr>
+				<td colspan="4" width="400px" height="400px">사진자리!!</td>			
+			</tr>
+			
+			<tr>
+				<td>Title</td>
+				<td><input type="text" name="p_title" value="${dto.p_name }"></td>
+				<td>Price</td>
+				<td><input type="text" name="p_price" value="${dto.p_price }"></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="3">Contents</td>
+				<td rowspan="3"><textarea name="p_contents" rows="4" cols="20">${dto.p_contents }</textarea></td>
+				<td>Quantity</td>
+				<td><input type="text" name="p_quantity" value="${dto.p_quantity }"></td>
+			</tr>
+			
+			<tr>
+				<td>Color</td>
+				<td><select name="p_color">
+				    <option selected="selected">${dto.p_color }</option>	
+					<option value="red">red</option>
+					<option value="orange">orange</option>					
+					<option value="yellow">yellow</option>
+					<option value="green">green</option>
+					<option value="blue">blue</option>
+					<option value="navy">navy</option>
+					<option value="purple">purple</option>
+				</select></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2"><input type="submit" value="Save">
+				<input type="reset" value="Reset"></td>
+			</tr>
+			
+		</table>
+	</form>
 </body>
 </html>
