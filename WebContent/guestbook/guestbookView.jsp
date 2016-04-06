@@ -8,9 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-#board {background-color: #f5f5f5; width:660px; height:auto;}
-#commentboard {background-color: #f5f5f5; width:660px; height:auto;}
+A:link    { text-decoration:none;}
+A:visited    { text-decoration:none;}
+A:active    { text-decoration:none;}
+A:hover    { text-decoration:none;}
+
 </style>
+
 <script>
 	function guestbookDelete(num){
 		document.guestbookComment.action="./GuestbookDeleteCtrl?num="+num;
@@ -19,7 +23,7 @@
 </script>
 </head>
 <body>
-	<div id="board">
+<p> &nbsp;</p>
 		<form action="GuestbookInsertCtrl" method="post">
 			<table border="1" cellpadding="0" cellspacing="0" align="center" width="650" >
 				<tr>
@@ -38,26 +42,24 @@
 				</tr>
 			</table>
 		</form>
-	</div>
 
-	<div id="commentboard">
-		<form name="guestbookComment" method="post">
+	<form name="guestbookComment" method="post">
 			<table border="1" cellpadding="0" cellspacing="0" align="center" width="650" >
 				<c:forEach var="dto" items="${list }">
 					<tr>
-						<td width="100px">작성자</td>
-						<td colspan="2">${dto.g_name}</td>
+						<td width="80px">작성자</td>
+						<td colspan="2">&nbsp;${dto.g_name}</td>
 					</tr>
 					<tr>
-						<td width="400px">내용</td>
-						<td>${dto.g_contents }</td>
+						<td width="80px">내용</td>
+						<td>&nbsp;${dto.g_contents }</td>
+						<c:if test="${id.equals('admin') }">
 						<td width="50px"><a href="GuestbookDeleteCtrl?num=${dto.g_num }">
 						<input type="button" value="삭제"></a></td>
+						</c:if>
 					</tr>
 				</c:forEach>
 			</table>
 		</form>
-	</div>
-	
 </body>
 </html>

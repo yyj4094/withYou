@@ -6,6 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style>
+A:link    { text-decoration:none;}
+A:visited    { text-decoration:none;}
+A:active    { text-decoration:none;}
+A:hover    { text-decoration:none;}
+</style>
+
 <script type="text/javascript">
 	function reviewDetail(num){
 		document.reviewform.action="./ReviewDetailCtrl?num="+num;
@@ -14,7 +21,9 @@
 </script>
 </head>
 <body>
+<c:if test="${id.equals('admin') }">
 <p align="right"><a href="index.jsp?page1=reviewInsert">글쓰기</a></p>
+</c:if>
 <form name="reviewform" method="post">
 <table border="1" cellspacing="0" cellpadding="0" align="center" width="650">
 <tr>

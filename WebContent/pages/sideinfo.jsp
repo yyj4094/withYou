@@ -8,10 +8,9 @@
 <title>sideinfo 입니다</title>
 </head>
 <body>
-	<c:if test="${id != null }">
+	
 	<a href="ProductListCtrl"> Product </a><br>
 	<a href="ReviewListCtrl"> Review </a><br>
 	<a href="GuestbookListCtrl"> Guestbook </a><br>
-	</c:if>
 </body>
 </html>

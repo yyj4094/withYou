@@ -11,7 +11,7 @@
 	<form action="ProductInsertCtrl" method="post">
 		<table border="1" align="center">
 			<tr>
-				<td colspan="4" width="400px" height="400px">사진자리!!</td>			
+				<td colspan="4" width="300px" height="300px">사진자리!!</td>			
 			</tr>
 			
 			<tr>
