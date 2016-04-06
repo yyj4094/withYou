@@ -25,7 +25,7 @@ td,tr { padding:0px; margin:0px; }
 		<td align="center">
 		<font size=2>이름</font>
 		</td>
-		<td><input type="text" name="r_name"></td>
+		<td>${id }<input type="hidden" name="r_name" value="${id }"></td>
 	</tr>
 	<tr>
 		<td align="center">

@@ -10,7 +10,7 @@
 #container {background-color: #0f0f0f; width: 960px; margin:0 auto; padding:10px;}
 #header {background-color: #908866; height:100px;}
 #content {background-color: #f5f5f5; float:right; width:760px; height:auto; min-height:400px;}
-#sideinfo {background-color: #dcdad9; float:left; width:200px; height:auto; min-height:400px;}
+#sideinfo {background-color: #dcdad9; float:left; width:200px; height:auto; min-height:400px; repeat-y;}
 #footer {background-color: #555555; clear:both; height:100px}
 </style>
 </head>

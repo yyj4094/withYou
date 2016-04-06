@@ -37,12 +37,11 @@
 		</tr>
 	</table>
 </form>
-//reply start!!
 <form action="reviewCommentInsertCtrl?num=${dto.r_num}" method="post">
 	<table>
 		<tr>
 			<td>작성자</td>
-			<td><input type="text" name=rc_name></td>	
+			<td>${id }<input type="hidden" name=rc_name value="${id }"> </td>	
 		</tr>
 		
 		<tr>

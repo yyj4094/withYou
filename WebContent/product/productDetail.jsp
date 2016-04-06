@@ -10,7 +10,7 @@
 <body>
 	<table border="1" align="center">
 			<tr>
-				<td colspan="4" width="400px" height="400px">사진자리!!</td>			
+				<td colspan="4" width="300px" height="300px">사진자리!!</td>			
 			</tr>
 			
 			<tr>
@@ -32,11 +32,12 @@
 				<td>${dto.p_color }</td>
 			</tr>
 			
+			<c:if test="${id.equals('admin') }">
 			<tr>
 				<td colspan="2"><a href="ProductEditCtrl?num=${dto.p_num }"}>Edit</a>&nbsp;&nbsp;
 				<a href="ProductDeleteCtrl?num=${dto.p_num }"> Delete</a></td>
 			</tr>
-			
+			</c:if>
 		</table>
 
 
