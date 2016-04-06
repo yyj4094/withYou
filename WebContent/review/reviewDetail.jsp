@@ -62,6 +62,7 @@
 			<tr>
 				<td>작성자</td>
 				<td>${list[i-1].rc_name}</td>
+				<td>${list.size() }</td>
 			</tr>
 			<tr>
 				<td>내용</td>
